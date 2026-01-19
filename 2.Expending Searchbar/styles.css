@@ -1,0 +1,43 @@
+html,body {
+    margin : 0;
+    padding : 0;
+}
+:root {
+    --search-border: #bbb;
+    --search-focus-border: #3a71ca;
+}
+.hide {
+    border:   0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.container {
+    padding: 2em;
+    width: 80%;
+    margin: auto;
+    min-width: 320px;
+}
+.searchbar {
+    width: 30%;
+    line-height: 2;
+    border-radius: 15px; 
+    border: 1px solid var(--search-border);
+    padding: 0em 1em;
+    transition: .7s;
+}
+.searchbar:focus {
+    width: 100%;
+    border-color: var(--search-focus-border); 
+    outline: none;   
+}
+.searchbar::placeholder {
+    font-weight: 200;
+}
+.searchbar:focus::placeholder {
+    color: transparent;
+}
